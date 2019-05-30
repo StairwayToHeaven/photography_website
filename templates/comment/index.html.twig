@@ -1,0 +1,17 @@
+<h2>Komentarze</h2>
+{% for comment in comments %}
+<div class="row">
+	<div class="col-md-4">
+		<h4>{{ comment.name }}</h4>
+		<p>{{ comment.date }}</p>
+	</div>
+	<div class="col-md-8">
+		<p>{{ comment.content }}</p>
+	</div>
+	{% if is_granted('ROLE_ADMIN') %}
+	<div class="col-md-12" style="background: #555555; padding: 10px;">
+		Moderacja: <a href="{{url('comment-edit', {id: comment.id})}}">{{ 'labels.edit'|trans }}</a> <a href="{{url('comment-delete', {id: comment.id})}}">{{ 'labels.delete'|trans }}</a>
+	</div>
+	{% endif %}
+</div>
+{% endfor %}

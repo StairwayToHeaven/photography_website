@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Użytkownicy - {% endblock %}
+
+{% block content %}
+    <h1>Użytkownicy</h1>
+	<table>
+	<tr>
+		<th>{{ 'labels.login'|trans }}</th>
+		<th>{{ 'labels.edit'|trans }}</th>
+		<th>{{ 'labels.delete'|trans }}</th>
+	</tr>
+    {% for user in view.collection %}
+		<tr>
+			<td>{{ user.login }}</td>
+			<td><a href="{{ url('user-edit', {id: user.id}) }}" title="{{ 'labels.edit'|trans }}">{{ 'labels.edit'|trans }}</a>
+			</td>
+			<td><a href="{{ url('user-delete', {id: user.id}) }}" title="{{ 'labels.delete'|trans }}">{{ 'labels.delete'|trans }}</a>
+			</td>
+		</tr>
+	{% endfor %}
+	</table>
+	<div class="pagination_nav">
+	{% if view.page > 1 %}
+        {% set previous = (view.page - 1) %}
+		<div class="prev">
+			<a href="{{ url('user-index', {'page': previous}) }}" title="{{ 'labels.nav.prev'|trans }}">
+				{{ 'labels.nav.prev'|trans }}
+			</a>
+		</div>
+    {%  endif %}
+    {% if view.page < view.pages %}
+        {% set next = (view.page + 1) %}
+		<div class="next">
+			<a href="{{ url('user-index', {'page': next}) }}" title="{{ 'labels.nav.next'|trans }}">
+				{{ 'labels.nav.next'|trans }}
+			</a>
+		</div>
+    {% endif  %}
+		<div class="clear"></div>
+	</div>
+
+{% endblock %}

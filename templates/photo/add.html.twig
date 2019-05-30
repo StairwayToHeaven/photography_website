@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dodaj zdjęcie - {% endblock %}
+
+{% block content %}
+    {% form_theme form with ['bootstrap_3_horizontal_layout.html.twig', 'form/form_errors.html.twig'] %}
+
+    <h1>Dodaj zdjęcie</h1>
+
+    {% if false == form.vars.valid %}
+        {% include 'default/_single_alert_message.html.twig' with {
+        is_single_message: true,
+        is_dismissible: false,
+        type: 'danger',
+        message: 'message.form_error',
+        } %}
+    {% endif %}
+
+    <div>
+        {{ form_start(form, { method: 'post', action: url('photo-add') }) }}
+            {{ form_widget(form) }}
+            <input type="submit" value="{{ 'action.save'|trans }}" class="btn btn-success" />
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

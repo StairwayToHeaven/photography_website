@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Portfolio - {% endblock %}
+
+{% block content %}
+	<!-- ORYGILANY KOD -->
+	<div class="starter-template">
+		<h1>PHOTO Galeria</h1>
+		{% if is_granted('ROLE_ADMIN') %}
+			<h2><a href="{{ url('photo-add')}}" title="Dodaj zdjęcie">dodaj</a></h2>
+		{% endif %}
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			{% for photo in photos %}
+				<p><img class="img-responsive" src="{{ asset('img/'~photo.url) }}" alt="{{photo.title}}"></p>
+				<p class="text-center"><small> {{photo.title}} </small></p>
+				{% if is_granted('ROLE_ADMIN') %}
+					<h3 style="text-align: center; margin: -15px auto 20px auto;"><a href="{{ url('photo-delete', {id: photo.id}) }}" title="Usuń zdjęcie">usuń</a></h3>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+	<p class="lead">Wszystkie obrazy zostały zaczerpnięte z darmowego źródła ze strony: <a>https://pixabay.com/</a></p>
+	<!-- PORTFOLIO POWYŻEJ -->
+	
+	<!-- LISTA KOMENTARZY -->
+	{{ render(url('comment-index')) }}
+	<!-- DODANIE KOMENTARZA DLA ZALOGOWANYCH -->
+	{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+		{{ render(url('comment-add')) }}
+	{% endif %}
+{% endblock %}

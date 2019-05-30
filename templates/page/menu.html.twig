@@ -1,0 +1,3 @@
+{% for page in pages %}
+	<li{% if active == page.slug %} class="active"{% endif %}><a href="{{ url('page-view', {'slug': page.slug}) }}">{{ page.title }}</a></li>
+{% endfor %}

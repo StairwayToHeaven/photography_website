@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="pl" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="message.user_successfully_add">
+                <source>message.user_successfully_add</source>
+                <target>Konto zostało zarejestrowane</target>
+            </trans-unit>
+            <trans-unit id="message.user_login_exist">
+                <source>message.user_login_exist</source>
+                <target>Login jest już wykorzystywany</target>
+            </trans-unit>
+            <trans-unit id="message.record_not_found">
+                <source>message.record_not_found</source>
+                <target>Nie znaleziono</target>
+            </trans-unit>
+            <trans-unit id="message.element_successfully_deleted">
+                <source>message.element_successfully_deleted</source>
+                <target>Element został usunięty</target>
+            </trans-unit>
+            <trans-unit id="message.element_successfully_edited">
+                <source>message.element_successfully_edited</source>
+                <target>Element został edytowany</target>
+            </trans-unit>
+            <trans-unit id="label.login">
+                <source>label.login</source>
+                <target>Login</target>
+            </trans-unit>
+            <trans-unit id="label.password">
+                <source>label.password</source>
+                <target>Hasło</target>
+            </trans-unit>
+            <trans-unit id="label.id">
+                <source>label.id</source>
+                <target>id</target>
+            </trans-unit>
+            <trans-unit id="label.second_password">
+                <source>label.second_password</source>
+                <target>Powtórz hasło</target>
+            </trans-unit>
+            <trans-unit id="label.role">
+                <source>label.role</source>
+                <target>Rola</target>
+            </trans-unit>
+            <trans-unit id="label.email">
+                <source>label.email</source>
+                <target>E-mail</target>
+            </trans-unit>
+            <trans-unit id="label.comment">
+                <source>label.comment</source>
+                <target>Komentarz</target>
+            </trans-unit>
+            <trans-unit id="title.auth_login">
+                <source>title.auth_login</source>
+                <target>Logowanie</target>
+            </trans-unit>
+            <trans-unit id="action.login">
+                <source>action.login</source>
+                <target>Logowanie</target>
+            </trans-unit>
+            <trans-unit id="action.save">
+                <source>action.save</source>
+                <target>Zapisz</target>
+            </trans-unit>
+            <trans-unit id="action.delete">
+                <source>action.delete</source>
+                <target>Usuń</target>
+            </trans-unit>
+            <trans-unit id="label.back_to_list">
+                <source>label.back_to_list</source>
+                <target>Powrót</target>
+            </trans-unit>
+            <trans-unit id="labels.edit">
+                <source>labels.edit</source>
+                <target>edytuj</target>
+            </trans-unit>
+            <trans-unit id="labels.delete">
+                <source>labels.delete</source>
+                <target>usuń</target>
+            </trans-unit>
+            <trans-unit id="labels.nav.prev">
+                <source>labels.nav.prev</source>
+                <target>poprzednia</target>
+            </trans-unit>
+            <trans-unit id="labels.nav.next">
+                <source>labels.nav.prev</source>
+                <target>następna</target>
+            </trans-unit>
+            <trans-unit id="label.name">
+                <source>label.name</source>
+                <target>Nick</target>
+            </trans-unit>
+			<trans-unit id="labels.login">
+                <source>labels.login</source>
+                <target>Login</target>
+            </trans-unit>
+			<trans-unit id="message.photo_successfully_deleted">
+                <source>message.photo_successfully_deleted</source>
+                <target>Zdjęcie zostało usunięte</target>
+            </trans-unit>
+			<trans-unit id="message.photo_successfully_added">
+                <source>message.photo_successfully_added</source>
+                <target>Zdjęcie zostało dodane</target>
+            </trans-unit>
+			<trans-unit id="label.title">
+                <source>label.title</source>
+                <target>Tytuł</target>
+            </trans-unit>
+			<trans-unit id="label.photo">
+                <source>label.photo</source>
+                <target>Zdjęcie</target>
+            </trans-unit>
+        <trans-unit id="message.page_successfully_add">
+                <source>message.page_successfully_add</source>
+                <target>Strona została pomyślnie dodana!</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

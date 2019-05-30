@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Portfolio - {% endblock %}
+
+{% block content %}
+	<!-- ORYGILANY KOD -->
+	<div class="starter-template">
+		<h1>PHOTO Galeria</h1>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<p><img class="img-responsive" src="{{ asset('img/1.jpg') }}" alt="Biedronka"></p>
+			<p class="text-center"><small> Biedronka </small></p>
+			
+			<p><img class="img-responsive" src="{{ asset('img/2.jpg') }}" alt="Liście"></p>
+			<p class="text-center"><small> Liście </small></p>
+			
+			<p><img class="img-responsive" src="{{ asset('img/3.jpg') }}" alt="Wzgórze"></p>
+			<p class="text-center"><small> Wzgórze </small></p>
+			<p><img class="img-responsive" src="{{ asset('img/4.jpg') }}" alt="Lis"></p>
+			<p class="text-center"><small> Lis </small></p>
+			
+			<p><img class="img-responsive" src="{{ asset('img/5.jpg') }}" alt="Przepaść"></p>
+			<p class="text-center"><small> Przepaść </small></p>
+			
+			<p><img class="img-responsive" src="{{ asset('img/6.jpg') }}" alt="Droga"></p>
+			<p class="text-center"><small> Droga </small></p>
+
+			<p><img class="img-responsive" src="{{ asset('img/7.jpg') }}" alt="Róża"></p>
+			<p class="text-center"><small> Róża </small></p>
+			
+			<p><img class="img-responsive" src="{{ asset('img/8.jpg') }}" alt="Krajobraz"></p>
+			<p class="text-center"><small> Krajobraz </small></p>
+			
+			<p><img class="img-responsive" src="{{ asset('img/9.jpg') }}" alt="Potok"></p>
+			<p class="text-center"><small> Potok </small></p>
+		</div>
+	</div>
+	<p class="lead">Wszystkie obrazy zostały zaczerpnięte z darmowego źródła ze strony: <a>https://pixabay.com/</a></p>
+	<!-- PORTFOLIO POWYŻEJ -->
+	
+	<!-- LISTA KOMENTARZY -->
+	{{ render(url('comment-index')) }}
+	<!-- DODANIE KOMENTARZA DLA ZALOGOWANYCH -->
+	{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+		{{ render(url('comment-add')) }}
+	{% endif %}
+{% endblock %}

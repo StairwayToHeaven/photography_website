@@ -1,0 +1,8 @@
+{% extends "base.html.twig" %}
+{% block title %}{{ page.title|raw }} - {% endblock %}
+{% block content %}
+	{% if is_granted('ROLE_ADMIN') %}
+		<h2><a href="{{ url('page-edit', {slug: page.slug}) }}">edytuj</a> <a href="{{ url('page-delete', {slug: page.slug}) }}">usuń</a></h2>
+	{% endif %}
+    {{ page.content|raw }}
+{% endblock %}

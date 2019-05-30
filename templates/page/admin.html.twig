@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Strony - {% endblock %}
+
+{% block content %}
+	<div class="starter-template">
+		<p>
+			
+		</p>
+		<p class="lead"></p>
+	</div>
+	<div class="row">
+		<div class="col-md-2">
+			<b>Strona</b>
+		</div>
+		<div class="col-md-2">
+			<b>Slug</b>
+		</div>
+		<div class="col-md-2">
+			<b>edycja</b>
+		</div>
+		<div class="col-md-2">
+			<b>usunięcie</b>
+		</div>
+	</div>
+	{% for page in pages %}
+	<div class="row">
+		<div class="col-md-2">
+			{{ page.title }}
+		</div>
+		<div class="col-md-2">
+			{{ page.slug }}
+		</div>
+		<div class="col-md-2">
+			<a href="{{ url('page-edit', {slug: page.slug}) }}">edytuj</a>
+		</div>
+		<div class="col-md-2">
+			<a href="{{ url('page-delete', {slug: page.slug}) }}">usuń</a>
+		</div>
+	</div>
+	{% endfor %}
+{% endblock %}
